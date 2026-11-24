@@ -1,0 +1,284 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fffaf3;
+    color: #333;
+}
+
+/* Navigation */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff6b35;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff6b35;
+}
+
+.cart-button,
+.order-button {
+    background: #ff6b35;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    background: linear-gradient(90deg, #fff0dc, #ffdab9);
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    color: #3d2418;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #665044;
+}
+
+.order-button {
+    display: inline-block;
+}
+
+/* Menu Section */
+
+.menu-section {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.menu-section h2,
+.about h2,
+.contact h2 {
+    font-size: 32px;
+    color: #3d2418;
+    margin-bottom: 12px;
+}
+
+.section-description {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.categories {
+    margin-bottom: 30px;
+}
+
+.categories button {
+    padding: 10px 22px;
+    margin: 6px;
+    border: 1px solid #ff6b35;
+    border-radius: 20px;
+    background: white;
+    color: #ff6b35;
+    cursor: pointer;
+}
+
+.categories button:hover {
+    background: #ff6b35;
+    color: white;
+}
+
+/* Food Cards */
+
+.food-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.food-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-6px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.food-card h3 {
+    margin: 15px 0 8px;
+}
+
+.food-card p {
+    color: #ff6b35;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.food-card button {
+    background: #ff6b35;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.food-card button:hover {
+    background: #e55320;
+}
+
+/* About and Contact */
+
+.about,
+.contact {
+    padding: 55px 10%;
+    text-align: center;
+    background: #fff0dc;
+}
+
+.about p,
+.contact p {
+    max-width: 650px;
+    margin: 10px auto;
+    line-height: 1.7;
+    color: #665044;
+}
+
+/* Shopping Cart */
+
+.cart-panel {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    max-width: 100%;
+    height: 100vh;
+    background: white;
+    padding: 25px;
+    box-shadow: -4px 0 15px rgba(0,0,0,0.2);
+    z-index: 200;
+    overflow-y: auto;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.cart-header button {
+    border: none;
+    background: #ff6b35;
+    color: white;
+    padding: 7px 12px;
+    cursor: pointer;
+}
+
+#cart-items {
+    margin-bottom: 25px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item button {
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.checkout-button {
+    width: 100%;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    padding: 13px;
+    margin-top: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #3d2418;
+    color: white;
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 650px) {
+    header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .cart-panel {
+        width: 100%;
+    }
+}
